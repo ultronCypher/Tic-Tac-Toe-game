@@ -1,0 +1,70 @@
+body{
+    background-color: burlywood;
+}
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    padding: 10px;
+    border: beige solid 6px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 6px beige;
+    font-family: 'Roboto', sans-serif;
+}
+.box{
+    background-color: aquamarine;
+    width: 200px;
+    height: 200px;
+    font-size: 10vw;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: #f5e2db;
+}
+.gameInfo{
+    position: absolute;
+    margin-left: 800px;
+}
+.btn{
+    cursor: pointer;
+    width: 140px;
+    height: 70px;
+    font-family: 'Roboto', sans-serif;
+    background-color: beige;
+    border: none;
+    position: relative;
+    outline: none;
+    border-radius: 2px;
+    font-size: 30px;
+}
+.btn.btn-underline::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: chocolate;
+    transition: transform 370ms ease-in-out;
+    transform: scaleX(0);
+}
+.btn.btn.btn-underline:hover::before,
+.btn.btn.btn-underline:focus::before{
+    transform: scaleX(1);
+}
+.info{
+    position: relative;
+    top: 70px;
+    left: 160px;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+}
